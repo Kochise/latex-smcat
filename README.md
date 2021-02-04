@@ -20,6 +20,8 @@ xcopy /c /h /e /r /q /y latex-smcat <miktex>\texmfs\install\tex\latex\smcat
 start "" "<miktex>\miktex-portable.cmd"
 ```
 
+Install version 7.3.0 at minimum because it brings EPS support that is currently superior to SVG.
+
 Refresh the filename database.<br>
 Update the package database.<br>
 You should be ready to go.<br>
@@ -60,6 +62,8 @@ testing      => final        : test ok;
 \end{smcat}
 ```
 
+![smcat](https://raw.githubusercontent.com/Kochise/latex-smcat/master/smcat.png)
+
 ## options
 
 What is available through 'smcat' :
@@ -68,10 +72,10 @@ What is available through 'smcat' :
 % Output the version number
 -V, --version
 
-% Output type (svg|dot|smcat|json|ast|scxml|scjson, default: "svg")
+% Output type (svg|eps|ps|ps2|dot|smcat|json|ast|scxml|oldsvg|scjson, default: "svg")
 -T, --output-type [type]
 
-% Input type (smcat|scxml|json, default: "smcat")
+% Input type (smcat|json|scxml, default: "smcat")
 -I, --input-type [type]
 
 % Rendering engine (dot|circo|fdp|neato|osage|twopi, default: "dot")
